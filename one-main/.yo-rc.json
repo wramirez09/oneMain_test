@@ -1,0 +1,9 @@
+{
+  "generator-yeo": {
+    "project": "oneMain",
+    "description": "employment test",
+    "author": "Will Ramirez",
+    "jsPreprocessor": "ES6(using babel)",
+    "tailwindCSS": "1.9.6"
+  }
+}

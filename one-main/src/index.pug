@@ -1,0 +1,137 @@
+extends _layouts/base
+
+include ./_modules/atoms/button/button
+
+
+block config
+  - isHome = true
+  - var pageTitle = 'One Main Financial'
+  - var page = 'homepage'
+  - var site = htmlWebpackPlugin.options //global site data
+
+block content
+  .container
+    .row
+      h1
+        | One-time Loan Payment Method
+      h2.mb-3 
+        | Fill out the form below to complete your payment.
+
+      form(action="" method="method").max-width-653.p-0
+        div.col-12.d-p-r-0 
+          .form-floating
+            input(type="number" name="account-number" id="account-number" placeholder="XXXXXXXX").form-control 
+            label(for="account-number").form-label.form-label__custom
+              | Loan Account Number
+            div.error-response.px-3.py-1
+              | Loan Account Number is required
+        
+        .col-12.col-md-6.d-p-r-0 
+            .d-flex.input-wrapper.align-items-end.position-relative.px-3
+              .floating-label
+                | Type of Account
+              .form-check.form-check-inline.pb-1
+                input(class="form-check-input" type="radio" name="inlineRadioOptions1" id="radioChecking" value="checking")
+                label( class="form-check-label" for="radioChecking") checking
+                
+
+              .form-check.form-check-inline.pb-1
+                input( class="form-check-input" type="radio" name="inlineRadioOptions2" id="debitRadio" value="debit" checked)
+                label( class="form-check-label" for="debitRadio2") Debit Card
+              
+
+            .form-floating.account-form.hidden
+              input(type="number" name="routing-number" id="routing-number" placeholder="XXXXXXXX" maxLength="9").form-control.border-bottom-0
+              label(for="routing-number").form-label.form-label__custom
+                | Routing Number
+
+              div.error-response.px-3.py-1
+                | Routing Number is required
+
+            .form-floating.account-form.hidden
+              input(type="number" name="bank-account-number" id="bank-account-number" placeholder="XXXXXXXX").form-control.border-bottom-0
+              label(for="bank-account-number").form-label.form-label__custom
+                | Bank Account Number
+
+              div.error-response.px-3.py-1
+                | Bank Account Number is required    
+
+            .form-floating.account-form.hidden
+              input(type="number" name="confirm-bank-account-number" id="confirm-bank-account-number" placeholder="XXXXXXXX").form-control 
+              label(for="confirm-bank-account-number").form-label.form-label__custom
+                | Confirm Bank Account Number
+
+              div.error-response.px-3.py-1
+                | Confirmed Bank Account Number is required  
+
+            .form-floating.card-form
+              input(type="number" name="card-number" id="card-number" placeholder="XXXXXXXX").form-control.border-bottom-0
+              label(for="card-number").form-label.form-label__custom
+                | Card Number 
+
+              div.error-response.px-3.py-1
+                | Card Number is required   
+
+            .form-floating.card-form
+              input(type="text" name="card-name" id="card-name" placeholder="John Doe").form-control.border-bottom-0
+              label(for="card-name").form-label.form-label__custom
+                | Name On Card 
+
+              div.error-response.px-3.py-1
+                | Card Number is required    
+                
+            .container.card-form
+              .row.g-0
+                .form-floating.col-md-6.p-0
+                  input(type="number" name="exp-date" id="exp-date" placeholder="XXXXXXXX").form-control.border-sm-bottom-0
+                  label(for="exp-date").form-label.form-label__custom
+                    | Expiration Date  
+
+                  div.error-response.px-3.py-1
+                    | Date is required  
+
+                .form-floating.col-md-6.p-0
+                  input(type="text" name="exp-date" id="cvv-input" placeholder="XXXXXXXX" maxlength="3").form-control 
+                  label(for="cvv-input").form-label.form-label__custom
+                    | CVV
+
+                  div.error-response.px-3.py-1
+                    | CVV is required  
+
+            .col-12.col-md-6.card-feature.d-block.d-lg-none.card-form
+              
+                .row.g-0
+                  .col.d-flex.flex-column.justify-content-center.align-items-center
+                    P.text-center where can I find the CVV number 
+                    img(src="/assets/images/cvv.png" alt="cvv image ").img-fluid  
+
+            .col-12.col-md-6.card-feature.d-block.d-lg-none.account-form
+              
+                .row.g-0
+                  p.text-center.mb-1 Where can I find the routing and<br/> account number?
+                  .d-flex.flex-column.justify-content-center.align-items-center
+                    img(src="/assets/images/check.png" alt="check image").img-fluid    
+
+
+        .col-12.col-md-6.card-feature.card-form.hide-mobile
+          .container
+            .row.g-0
+              .col.d-flex.flex-column.justify-content-center.align-items-center
+                P.text-center where can I find the CVV number 
+                img(src="/assets/images/cvv.png" alt="Amiculum Digital Logo").img-fluid            
+        
+        .col-12.col-md-6.card-feature.account-form.hidden.pb-2.hide-mobile
+          .container.p-1
+            .row.g-0
+              .col 
+                p.text-center.mb-1 Where can I find the routing and<br/> account number?
+                
+                .col.d-flex.flex-column.justify-content-center.align-items-center
+                  img(src="/assets/images/check.png" alt="Amiculum Digital Logo").img-fluid            
+        
+    //- +button({
+    //-   "__class": "my-10",
+    //-   "__text": "Learn More", 
+    //-   "__link": "https://www.npmjs.com/package/generator-yeo",
+    //-   "__target": "_blank"
+    //- })

@@ -1,0 +1,148 @@
+
+
+// // Import Third-party plugins' CSS here
+// @import '../../node_modules/normalize.css/normalize';
+
+// Site Mixins, Variables and Fonts here
+@import "./_mixins";
+@import "./_var";
+@import "./_styles";
+@import "./_fonts";
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+  font-size: $base-fontsize;
+}
+
+body {
+  font-family: $primaryFont;
+  color: $blck;
+  line-height: $base-lineheight;
+  margin: 0;
+  padding: 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+  }
+}
+
+h1{
+  font-size: 32px;
+  font-weight: bold;
+}
+h2{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+[class*=" col-"], [class^=col-] {
+  padding: 0 15px;
+}
+
+.form-control{
+  padding: 6px .75rem;
+  border-radius: 0px;
+  border-color: #D8D8D8;
+}
+
+
+.form-label__custom {
+  font-size: $labelFontSize;
+  font-weight: bold;
+  padding-top: 6px !important;
+}
+
+.form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label{
+transform: scale(.85) translateY(-.3rem) translateX(.15rem);
+}
+
+
+.input-wrapper {
+  border-left: $border;
+  border-right: $border;
+  // border-bottom: $border;
+  min-height: 60px;
+}
+
+.floating-label{
+  font-size: $labelFontSize;
+  position: absolute;
+  top: 6px;
+  font-weight: bold;
+  
+}
+.form-check-label{
+  font-size: 14px;
+  font-weight: 300;
+}
+.error-response{
+  background-color: $errorBg;
+  font-size: $labelFontSize;
+  color: $errorTextColor;
+  border-left: $border;
+  border-right: $border;
+  font-weight: 300;
+  display: none;
+}
+
+.card-feature {
+  background: $lightBlueBg;
+  // border-left: $border;
+  border-right: $border;
+  padding: 15px 15px 49px 15px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media only screen and (min-width: $bpDesktop) {
+  .max-width-653{
+    max-width: 653px;
+  }
+}
+
+
+@media only screen and (min-width: $bpDesktop) {
+.d-p-r-0 {
+    padding: 0 0 0 15px !important;
+  }
+
+#exp-date{
+    border-right: none;
+  } 
+}
+
+
+@media only screen and (max-width: $bpTablet) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $bpTablet) {
+  .hide-desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #exp-date{
+    border-bottom: none;
+  }  
+}
+
+// Print layout here
+@media print {
+
+}
+
+// Import Modules CSS here
+@import "../_modules/atoms/button/button";
