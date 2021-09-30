@@ -10,12 +10,13 @@
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &:hover {
-    color: $blck;
-    background-color: transparent;
-    box-shadow: 0 0 0 5px $orange50;
+    color: white;
+    background-color: $buttonHoverBg;
+    transition: all .333s ease-in-out;
+    // box-shadow: 0 0 0 5px $buttonHoverBg;
   }
 
   &:focus {
-    box-shadow: 0 0 0 5px $orange50;
+    // box-shadow: 0 0 0 5px $buttonHoverBg;
   }
 }
