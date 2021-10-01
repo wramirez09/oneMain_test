@@ -22,8 +22,9 @@ export default class Validations {
     }
 
     inputValidate(input){
-        console.log("value", input.value)
+        
         if(input.value === ""){
+            input.nextElementSibling.style.color = "#800F1D"
             input.nextElementSibling.nextElementSibling.classList.add("d-block");
             return false
         }
