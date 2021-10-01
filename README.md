@@ -3,8 +3,7 @@
 
 ## Description
 
-This is an example readme file.
-Describe your site/app here.
+simple form with barebones simple custom form validation
 
 ## Technologies used
 
